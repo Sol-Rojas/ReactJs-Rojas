@@ -1,7 +1,7 @@
 import './App.css';
-import Cards from './container/Cards';
 import Title from './components/Title';
 import Navbar from './components/Navbar';
+import Cards from './container/Cards';
 
 const App = () => {
   return (

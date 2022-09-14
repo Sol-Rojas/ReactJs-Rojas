@@ -1,21 +1,7 @@
-import { useState } from "react"
-const Card = ({name, id, img, marca, precio}) => {
+import Cant from "./Cant";
+const Card = ({product}) => {
 
-  const[rate, setRate] = useState(1);
-
-  const handleMas = () => {
-    if (rate < 8) {
-      setRate(rate+1)
-    } else {
-      alert("No hay más stock")
-    }
-  }
-
-  const handleRest = () => {
-    if (rate > 1) {
-      setRate(rate-1)
-    }
-  }
+  //Alerta por realizar compra
   const handleBuy = (id) => {
     alert(`Producto ${id} comprado`)
   }
@@ -23,14 +9,14 @@ const Card = ({name, id, img, marca, precio}) => {
     return (
       <>
       <div className='card'>
-        <img className='product' src={img} alt="producto" />
+        <img className='product' src={product.img} alt="producto" />
+        <button className="btn btn-dark">Ver detalles</button>
         <div className="card-body">
-          <h3 className="card-title">{name}</h3>
-          <p className="card-text">{marca}</p>
-          <p className="">{precio}</p>
-          <button className="btn btn-dark" onClick={handleMas}>+</button> {rate} Unidades
-          <button className="btn btn-dark" onClick={handleRest}>-</button> 
-          <button className="btn btn-dark buy" onClick={() => handleBuy(id)}> Comprar</button>
+          <h3 className="card-title">{product.name}</h3>
+          <p>{product.marca}</p>
+          <p>{product.precio}</p>
+          <Cant />
+          <button className="btn btn-dark buy" onClick={() => handleBuy(product.id)}> Comprar</button>
         </div>
       </div>           
       </>

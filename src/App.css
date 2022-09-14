@@ -1,7 +1,12 @@
-main{
+main {
   display: flex;
   justify-content: center;
 }
+
+h1 {
+  font-size: 25px;
+}
+
 /* --------------HEADER----------------- */
 .navbar {
   background-color: black;
@@ -10,7 +15,7 @@ main{
 }
 
 .navbar-brand {
-  font-size:xx-large;
+  font-size: 40px;
 }
 
 form {
@@ -19,7 +24,7 @@ form {
 }
 
 .navtop {
-  display: flex; 
+  display: flex;
   justify-content: space-around;
   margin-bottom: 5px;
 }
