@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "img": "https://bairesrocks.vteximg.com.br/arquivos/ids/236251/GP-310WE_8.jpg?v=637837506252130000",
+    "name": "Piano Celviano",
+    "marca": "Casio",
+    "description": "Piano Casio Gp-310we Celviano Grand Hybrid 88 Usb Banqueta",
+    "precio": "890000"
+  },
+  {
+    "id": 2,
+    "img": "https://bairesrocks.vteximg.com.br/arquivos/ids/238330/YAM-TRBX174DBM_v.jpg?v=637951335785500000",
+    "name": "Guitarra Electrica",
+    "marca": "Yamaha",
+    "description": "--------Guitarra Electrica Yamaha PAC612VIIXTGM Pacifica Teal Green Metallic---------Guitarra eléctrica de cuerpo sólido sin sentido con cuerpo de aliso ligero 3 pastillas Seymour Duncan proporcionan una amplia gama de tonos increíblesLa cuchilla de 5 posiciones, el volumen maestro y el tono maestro con push-pull le permiten dividir el humbucker y marcar en una amplia variedad de tonos, mástil de arce en forma de C con diapasón de palisandro es cómodo y jugable, puente Wilkinson VS50 y los sintonizadores de bloqueo Grover lo mantienen en sintonía",
+    "precio": "569705"
+  },
+  {
+    "id": 3,
+    "img": "https://bairesrocks.vteximg.com.br/arquivos/ids/237876/YAM-PAC120HBL-02.jpg?v=637930960267530000",
+    "name": "Redoblante",
+    "marca": "Yamaha",
+    "description": "Redoblante Yamaha RLS1470 Recording Custom 14x7",
+    "precio": "91600"
+  },
+  {
+    "id": 4,
+    "img": "https://bairesrocks.vteximg.com.br/arquivos/ids/231931/1-01.jpg?v=637661421747170000",
+    "name": "Bajo Eléctrico",
+    "marca": "Squier",
+    "description": "Bajo Eléctrico Squier by Fender Jazz Bass 4 Cuerdas Burgundy Mist",
+    "precio": "200760"
+  },
+  {
+    "id": 5,
+    "img": "https://bairesrocks.vteximg.com.br/arquivos/ids/228864/Flauta_Knighe_Tecnica-02.jpg?v=637617411942330000",
+    "name": "Saxofon",
+    "marca": "Knight",
+    "description": "Saxofon Knight PAC612IXT",
+    "precio": "1400000"
+  }
+]

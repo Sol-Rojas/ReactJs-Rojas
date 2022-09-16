@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import CardList from '../components/CardList';
-import getCards from '../utils/getProducts';
+import getProducts from '../utils/getProducts';
 import Loader from '../components/Loader';
 
 const Cards = () => {
@@ -13,15 +13,20 @@ const Cards = () => {
 
     setLoading(true);
 
-    getCards()
+    fetch(`instrumentos.json`) // Traigo los productos del json
+    .then((res) => res.json())
+    .then(dataFromDB => {
 
-    .then((response)=> setArrayList(response))
-    .catch((err) => console.error(err))
-    .finally(() => setLoading(false))
+      getProducts(dataFromDB) 
+      .then((data) => setArrayList(data)) 
+      .catch((err) => console.error(err))
+      .finally(() => setLoading(false))
+    })
 
   }, [])
 
   return (
+    // Ejecuto el componente Loader mientras el objeto no este listo para ser usado
     <>
       {loading ? <Loader /> : <CardList products = {arrayList} /> }
     </>

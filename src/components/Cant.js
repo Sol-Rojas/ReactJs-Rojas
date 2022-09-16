@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const Cant = () => {
     
-  // Botones para unidades del producto
+  // Botones para cantidad de unidades del producto
   const[rate, setRate] = useState(1);  
 
   const handleMas = () => {
@@ -20,8 +20,10 @@ const Cant = () => {
   }
     return (
         <>
+        <div className='agregar-restar'>
           <button className="btn btn-dark" onClick={handleMas}>+</button> {rate} Unidades
           <button className="btn btn-dark" onClick={handleRest}>-</button> 
+        </div>
         </>
     );
 }

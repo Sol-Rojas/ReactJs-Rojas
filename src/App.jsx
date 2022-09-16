@@ -1,15 +1,17 @@
 import './App.css';
 import Title from './components/Title';
 import Navbar from './components/Navbar';
-import Cards from './container/Cards';
+//  import Cards from './container/Cards';
+import Details from './container/Details';
 
 const App = () => {
   return (
     <>
       <Navbar />
-      <Title greeting="Productos destacados" />
+      <Title greeting="Detalle del producto" />
       <main className='d-flex flex-wrap'>
-        <Cards />
+        {/* <Cards />    */}
+        <Details/> 
       </main>
     </>
   );

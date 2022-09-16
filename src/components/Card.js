@@ -1,4 +1,3 @@
-import Cant from "./Cant";
 const Card = ({product}) => {
 
   //Alerta por realizar compra
@@ -15,7 +14,6 @@ const Card = ({product}) => {
           <h3 className="card-title">{product.name}</h3>
           <p>{product.marca}</p>
           <p>{product.precio}</p>
-          <Cant />
           <button className="btn btn-dark buy" onClick={() => handleBuy(product.id)}> Comprar</button>
         </div>
       </div>           
