@@ -1,19 +1,22 @@
 import './App.css';
-import Title from './components/Title';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
-//  import Cards from './container/Cards';
+import Cards from './container/Cards';
 import Details from './container/Details';
+import Contact from './components/Contact';
+
 
 const App = () => {
   return (
-    <>
-      <Navbar />
-      <Title greeting="Detalle del producto" />
-      <main className='d-flex flex-wrap'>
-        {/* <Cards />    */}
-        <Details/> 
-      </main>
-    </>
+     <BrowserRouter>
+        <Navbar />
+        <Routes >
+            <Route path="/" element={<Cards /> } />  
+            <Route path="/catg/:id" element={<Cards /> } /> 
+            <Route path="/detail/:id" element={<Details /> } />
+            <Route path='/contact' element={<Contact />} />
+        </Routes>
+     </ BrowserRouter >
   );
 }
 

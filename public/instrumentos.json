@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "catg": 1,
     "img": "https://bairesrocks.vteximg.com.br/arquivos/ids/236251/GP-310WE_8.jpg?v=637837506252130000",
     "name": "Piano Celviano",
     "marca": "Casio",
@@ -9,6 +10,7 @@
   },
   {
     "id": 2,
+    "catg": 2,
     "img": "https://bairesrocks.vteximg.com.br/arquivos/ids/238330/YAM-TRBX174DBM_v.jpg?v=637951335785500000",
     "name": "Guitarra Electrica",
     "marca": "Yamaha",
@@ -17,6 +19,7 @@
   },
   {
     "id": 3,
+    "catg": 4,
     "img": "https://bairesrocks.vteximg.com.br/arquivos/ids/237876/YAM-PAC120HBL-02.jpg?v=637930960267530000",
     "name": "Redoblante",
     "marca": "Yamaha",
@@ -25,6 +28,7 @@
   },
   {
     "id": 4,
+    "catg": 2,
     "img": "https://bairesrocks.vteximg.com.br/arquivos/ids/231931/1-01.jpg?v=637661421747170000",
     "name": "Bajo Eléctrico",
     "marca": "Squier",
@@ -33,6 +37,7 @@
   },
   {
     "id": 5,
+    "catg": 3,
     "img": "https://bairesrocks.vteximg.com.br/arquivos/ids/228864/Flauta_Knighe_Tecnica-02.jpg?v=637617411942330000",
     "name": "Saxofon",
     "marca": "Knight",

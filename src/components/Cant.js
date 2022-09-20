@@ -21,8 +21,8 @@ const Cant = () => {
     return (
         <>
         <div className='agregar-restar'>
-          <button className="btn btn-dark" onClick={handleMas}>+</button> {rate} Unidades
-          <button className="btn btn-dark" onClick={handleRest}>-</button> 
+          <button className="btn btn-dark cantMas" onClick={handleMas}>+</button> {rate} Unidades
+          <button className="btn btn-dark cantMenos" onClick={handleRest}>-</button> 
         </div>
         </>
     );

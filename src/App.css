@@ -1,4 +1,4 @@
-main {
+.route {
   display: flex;
   justify-content: center;
 }
@@ -9,6 +9,7 @@ h1 {
 }
 
 /* --------------HEADER----------------- */
+
 .navbar {
   background-color: black;
   padding-right: 8px;
@@ -62,13 +63,20 @@ li {
 }
 
 /* ------------------- PRODUCTOS------------- */
+
 .product {
   width: 300px;
   height: 280px;
 }
 
 .card {
+  border: none;
   margin: 1rem;
+  width: 20rem;
+}
+
+.card:hover {
+  box-shadow: 0px 2px 2px 2px #534c4c;
 }
 
 .buy {
@@ -76,6 +84,7 @@ li {
 }
 
 /* ----------------DETALLE PRODUCTO--------- */
+
 .container-Detail {
   display: flex;
   justify-content: space-around;
@@ -96,6 +105,56 @@ li {
   width: 40%;
 }
 
+.cantMas {
+  margin: 5px;
+}
+
+.cantMenos {
+  margin: 5px;
+}
+
 .agregar-restar {
-  margin-top: 8rem;
+  margin-top: 7rem;
+  margin-bottom: 3rem;
+}
+
+.agregarCarrito { 
+  width: 100%;
+}
+/* ----------CONTACTO------------ */
+
+form {
+  text-align: start;
+  color: #f1f1f1;
+}
+
+.btn-darkk {
+  background-color: #ffffff;
+  border: none;
+  box-shadow: 1px 1px 1px 1px #867d7d;
+}
+
+.clicks {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 5px;
+  background-color: #040404;
+  margin: 3rem;
+  box-shadow: 1px 1px 1px 1px #534c4c
+} 
+
+
+.tituloContacto {
+  text-align: center;
+  margin-right: 30px;
+  background-color: #e6e0de90;
+  padding: 10px;
+  margin: 30px;
+}
+
+.contacto {
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
 }

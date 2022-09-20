@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
+
 const CartWidgdet = () => {
     return (
      <>
         <div className="navtop">
-            <a className="navbar-brand" href="../public/index">SOUNDSARC</a>
+            <Link to="/" className='navbar-brand'>SOUNDSARC</Link>
             <form>
                 <input className="form-control me-sm-2" type="text" placeholder="Search" />
                 <button className="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
