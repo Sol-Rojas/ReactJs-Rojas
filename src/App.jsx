@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Cards from './container/Cards';
 import Details from './container/Details';
 import Contact from './components/Contact';
+import Cart from './components/Cart';
 
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
             <Route path="/catg/:id" element={<Cards /> } /> 
             <Route path="/detail/:id" element={<Details /> } />
             <Route path='/contact' element={<Contact />} />
+            <Route path='/cart' element={<Cart />} />
         </Routes>
      </ BrowserRouter >
   );

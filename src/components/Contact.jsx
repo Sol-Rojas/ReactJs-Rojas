@@ -1,6 +1,23 @@
 import React from 'react';
+import Swal from 'sweetalert2'
 
 const Contact = () => {
+
+
+    const onAdd = (e) => {
+
+        e.preventDefault()
+
+        Swal.fire({
+            icon: 'success',
+            title: 'Enviado',
+            width: '27rem' ,
+            padding: '33px',
+            color: '#000',
+            background: 'url(https://s.clipartkey.com/mpngs/s/275-2750618_music-note-frame-black-music-note-notes-music.png)'  
+        })
+    }
+
     return (
         <>
             <section className="clicks">
@@ -30,7 +47,7 @@ const Contact = () => {
                    </div>
                </div>
                <div className="col-12">
-                   <button type="submit" className="btn btn-darkk">Enviar</button>
+                   <button type="submit" className="btn btn-darkk" onClick={onAdd}>Enviar</button>
                </div>
                </form>
            </section>

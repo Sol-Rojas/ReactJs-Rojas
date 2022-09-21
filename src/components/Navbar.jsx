@@ -16,10 +16,10 @@ const Navbar = () => {
             <li className="nav-item dropdown">
               <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Comprar</a>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><Link to="/catg/1" className='dropdown-item'>Pianos</Link></li>
-                <li><Link to="/catg/2" className='dropdown-item'>Guitarras</Link></li>
-                <li><Link to="/catg/3" className='dropdown-item'>Instrumentos de viento</Link></li>
-                <li><Link to="/catg/4" className='dropdown-item'>Percusion</Link></li>
+                <li><Link to="/catg/1" className='dropdown-item'>Piano</Link></li>
+                <li><Link to="/catg/2" className='dropdown-item'>Guitarra</Link></li>
+                <li><Link to="/catg/3" className='dropdown-item'>Vientos</Link></li>
+                <li><Link to="/catg/4" className='dropdown-item'>Percusión</Link></li>
               </ul>
             </li>
             <li className="nav-item">

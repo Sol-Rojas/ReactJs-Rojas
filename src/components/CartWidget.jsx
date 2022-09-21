@@ -9,12 +9,12 @@ const CartWidgdet = () => {
                 <input className="form-control me-sm-2" type="text" placeholder="Search" />
                 <button className="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
             </form>
-            <div className="cart">
-                <a  className="nav-link" href="#">
-                  <img src="https://img.icons8.com/ios-filled/35/f0f8ff/shopping-cart.png"/>
-                  <span className="carrito">2</span>
-                </a>
-            </div>
+            <Link to="/cart" className='navbar-brand'>            
+                <div className="cart">
+                    <img src="https://img.icons8.com/ios-filled/38/f0f8ff/shopping-cart.png"/>
+                    <span className="carrito">2</span>               
+                </div>
+            </Link>
        </div>
      </>
     );

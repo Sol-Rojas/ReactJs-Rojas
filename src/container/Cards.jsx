@@ -31,15 +31,13 @@ const Cards = () => {
         .catch((err) => console.error(err))
         .finally(() => setLoading(false))
       }
-
     })
-
   }, [id])
 
   return (
     // Ejecuto el componente Loader mientras el objeto no este listo para ser usado
     <>
-      <div className='d-flex flex-wrap route'>
+      <div className='container-prod d-flex flex-wrap route'>
         {loading ? <Loader /> : <CardList products = {arrayList} /> }
       </div>
     </>

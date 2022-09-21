@@ -31,15 +31,18 @@ form {
   margin-bottom: 5px;
 }
 
+/* --------CARRITO----------- */
 .cart {
   margin-left: 5px;
 }
 
 .carrito {
+  font-size:medium;
   background-color: rgb(221, 31, 31);
   color: aliceblue;
   padding-right: 5px;
-  padding-left: 5px;
+  padding-left: 6px;
+  text-align: center;
   border-radius: 10px;
 }
 
@@ -64,6 +67,10 @@ li {
 
 /* ------------------- PRODUCTOS------------- */
 
+.container-prod {
+  margin: 3rem;
+}
+
 .product {
   width: 300px;
   height: 280px;
@@ -71,12 +78,13 @@ li {
 
 .card {
   border: none;
-  margin: 1rem;
+  margin: 2rem;
   width: 20rem;
+  border-bottom: solid 1px #534c4c9c;
 }
 
 .card:hover {
-  box-shadow: 0px 2px 2px 2px #534c4c;
+  box-shadow: 0px 2px 2px 2px #534c4cae;
 }
 
 .buy {
@@ -118,9 +126,10 @@ li {
   margin-bottom: 3rem;
 }
 
-.agregarCarrito { 
+.agregarCarrito {
   width: 100%;
 }
+
 /* ----------CONTACTO------------ */
 
 form {
@@ -136,25 +145,37 @@ form {
 
 .clicks {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-content: center;
-  padding: 5px;
+  padding: 15px;
   background-color: #040404;
   margin: 3rem;
   box-shadow: 1px 1px 1px 1px #534c4c
-} 
-
+}
 
 .tituloContacto {
   text-align: center;
-  margin-right: 30px;
   background-color: #e6e0de90;
   padding: 10px;
   margin: 30px;
 }
 
 .contacto {
-  font-weight: bold;
   color: #ffffff;
   text-decoration: none;
+}
+
+/* ---SWAL-- */
+
+button.swal2-confirm.swal2-styled{
+  background: #000000de;
+  border-radius: 0px
+}
+
+div.swal2-actions{
+  margin-top: 10px;
+}
+
+h2.swal2-title {
+  padding-top: 10px;
 }
