@@ -1,13 +1,19 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import Swal from 'sweetalert2'
 import Cant from "./Cant";
+import { CartContext } from "./CartContext";
 
 const CardDetail = ({item}) => {
 
   const [itemCount, setItemCount] = useState(0);
 
+  const { addProduct } = useContext(CartContext)
+
+  // Agregar al carrito
   const onAdd = (qtity) => {
+
+    // alerta agregar
     Swal.fire({
       icon: 'success',
       title: 'Añadido al carrito',
@@ -17,6 +23,9 @@ const CardDetail = ({item}) => {
       background: 'url(https://s.clipartkey.com/mpngs/s/275-2750618_music-note-frame-black-music-note-notes-music.png)'
     })
     setItemCount(qtity)
+
+    // funcion agregae
+    addProduct(item)
   }
 
     return (

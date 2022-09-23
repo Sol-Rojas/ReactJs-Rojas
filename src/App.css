@@ -179,3 +179,28 @@ div.swal2-actions{
 h2.swal2-title {
   padding-top: 10px;
 }
+
+/* -------CARDS CARRRITO----------- */
+
+.prod-carrito{
+  width: 540px;
+}
+
+.cartBody {
+  display: flex;
+  justify-content: space-between;
+}
+
+.carrito-vacio {
+  margin-bottom: 3rem;
+}
+
+.rutaCard {
+  padding: 2rem;
+  background-color: #867d7d2e;
+  box-shadow: 1px 1px 2px 2px #534c4c82;
+}
+
+.botonVaciar {
+  margin-top: 2rem;
+}
