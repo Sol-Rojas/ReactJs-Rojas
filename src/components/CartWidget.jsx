@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
+import React, { useContext } from 'react';
+import { CartContext } from "../context/CartContext";
 
 const CartWidgdet = () => {
+    const { totalProductsQty } = useContext(CartContext)
     return (
      <>
         <div className="navtop">
@@ -12,7 +15,7 @@ const CartWidgdet = () => {
             <Link to="/cart" className='navbar-brand'>            
                 <div className="cart">
                     <img src="https://img.icons8.com/ios-filled/38/f0f8ff/shopping-cart.png"/>
-                    <span className="carrito">2</span>               
+                    <span className="carrito">{totalProductsQty()|| '!'}</span>               
                 </div>
             </Link>
        </div>

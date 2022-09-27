@@ -9,7 +9,7 @@ const Navbar = () => {
           <span className="navbar-toggler-icon"/>
         </button>
         <div className="collapse navbar-collapse" id="navbarColor01">
-          <ul className="navbar-nav list">
+          <ul className="navbar-nav ">
             <li className="nav-item">
                <Link to="/" className='nav-link'>Inicio</Link>
             </li>

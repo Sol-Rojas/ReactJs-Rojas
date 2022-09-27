@@ -5,7 +5,7 @@ import Cards from './container/Cards';
 import Details from './container/Details';
 import Contact from './components/Contact';
 import Cart from './components/Cart';
-import CartContextProvider from './components/CartContext'
+import CartContextProvider from './context/CartContext'
 
 const App = () => {
   return (
