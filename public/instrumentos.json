@@ -7,7 +7,7 @@
     "marca": "Casio",
     "stock": 10,
     "description": "Piano Casio Gp-310we Celviano Grand Hybrid 88 Usb Banqueta",
-    "precio": "890000"
+    "precio": 890000
   },
   {
     "id": 2,
@@ -17,7 +17,7 @@
     "marca": "Yamaha",
     "stock": 10,
     "description": "--------Guitarra Electrica Yamaha PAC612VIIXTGM Pacifica Teal Green Metallic---------Guitarra eléctrica de cuerpo sólido sin sentido con cuerpo de aliso ligero 3 pastillas Seymour Duncan proporcionan una amplia gama de tonos increíblesLa cuchilla de 5 posiciones, el volumen maestro y el tono maestro con push-pull le permiten dividir el humbucker y marcar en una amplia variedad de tonos, mástil de arce en forma de C con diapasón de palisandro es cómodo y jugable, puente Wilkinson VS50 y los sintonizadores de bloqueo Grover lo mantienen en sintonía",
-    "precio": "569705"
+    "precio": 569705
   },
   {
     "id": 3,
@@ -27,7 +27,7 @@
     "marca": "Yamaha",
     "stock": 10,
     "description": "Redoblante Yamaha RLS1470 Recording Custom 14x7",
-    "precio": "91600"
+    "precio": 91600
   },
   {
     "id": 4,
@@ -37,7 +37,7 @@
     "marca": "Squier",
     "stock": 10,
     "description": "Bajo Eléctrico Squier by Fender Jazz Bass 4 Cuerdas Burgundy Mist",
-    "precio": "200760"
+    "precio": 200760
   },
   {
     "id": 5,
@@ -47,7 +47,7 @@
     "marca": "Knight",
     "stock": 10,
     "description": "Saxofon Knight PAC612IXT",
-    "precio": "1400000"
+    "precio": 1400000
   },
   {
     "id": 6,
@@ -57,7 +57,7 @@
     "marca": "Sonor",
     "stock": 10,
     "description": "Sonor Vintage Three20",
-    "precio": "1650619"
+    "precio": 1650619
   },
   {
     "id": 7,
@@ -67,7 +67,7 @@
     "marca": "Cort",
     "stock": 10,
     "description": "Guitarra Electroacústica  Cort  AD810E-OP En Acabado Natural",
-    "precio": "93329"
+    "precio": 93329
   },
   {
     "id": 8,
@@ -77,7 +77,7 @@
     "marca": "Yamaha",
     "stock": 10,
     "description": "Piano Digital Yamaha CLP-725 Serie Clavinova 88 teclas",
-    "precio": "967367"
+    "precio": 967367
   },
   {
     "id": 9,
@@ -87,7 +87,7 @@
     "marca": "Jupiter",
     "stock": 10,
     "description": "Clarinete bajo Jupiter JBC1000N Serie 1000",
-    "precio": "1100819"
+    "precio": 1100819
   },
   {
     "id": 10,
@@ -97,7 +97,7 @@
     "marca": "Ibanez",
     "stock": 10,
     "description": "Ibanez Guitarra Electro Acustica Microfono Y Afinador Pf17",
-    "precio": "99886"
+    "precio": 99886
   },
   {
     "id": 11,
@@ -107,7 +107,7 @@
     "marca": "Casio",
     "stock": 10,
     "description": "Piano digital Celviano AP-270 BK",
-    "precio": "538026"
+    "precio": 538026
   },
   {
     "id": 12,
@@ -117,7 +117,7 @@
     "marca": "Pearl",
     "stock": 10,
     "description": "Flauta Traversa Pearl 505re-1r Llaves Ab En Mi Con Estuche",
-    "precio": "290310"
+    "precio": 290310
   },
   {
     "id": 13,
@@ -127,7 +127,7 @@
     "marca": "Roland",
     "stock": 10,
     "description": "Piano Digital 88 teclas Roland F701WH Supernatural MIDI Bluetooth Blanco",
-    "precio": "671775"
+    "precio": 671775
   },
   {
     "id": 14,
@@ -137,7 +137,7 @@
     "marca": "Pearl",
     "stock": 10,
     "description": "Batería Pearl Master Maple Reserve Series 3 cuerpos Sin Fierros B22x16 TT12x8 TF16x16 353 Matte White",
-    "precio": "1047007"
+    "precio": 1047007
   },
   {
     "id": 15,
@@ -147,6 +147,6 @@
     "marca": "Kurzweil",
     "stock": 10,
     "description": "Piano Digital Kurzweil 88 teclas de Acción de Martillo - 1/4 de Cola",
-    "precio": "9999876"
+    "precio": 9999876
   }
 ]
