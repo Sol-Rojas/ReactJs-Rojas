@@ -1,10 +1,9 @@
-import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import CardList from '../components/CardList';
-import getProducts from '../utils/getProducts';
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import CardList from "../components/CardList";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../utils/firebaseConfig";
-import Loader from '../components/Loader';
+import Loader from "../components/Loader";
 
 const Cards = () => {
 
@@ -39,33 +38,13 @@ const Cards = () => {
     }
 
     firestoreFetch()
-      .then(result => setArrayList(result))
-    /* 
-//------------Utilizo json como baso de datos--------------------
 
-        setLoading(true);
-    
-         fetch(`/instrumentos.json`) // Traigo los productos del json
-        .then(res => res.json())
-        .then(dataFromDB => {
-    
-          if (id != undefined) {
-            getProducts(dataFromDB.filter(product => product.catg == id)) 
-            .then((data) => setArrayList(data)) 
-            .catch((err) => console.error(err))
-            .finally(() => setLoading(false))
-          } else {
-            getProducts(dataFromDB) 
-            .then((data) => setArrayList(data)) 
-            .catch((err) => console.error(err))
-            .finally(() => setLoading(false))
-          }
-        })
-      */
+    .then(result => setArrayList(result))
+
   }, [id])
 
   return (
-    // Ejecuto el componente Loader mientras el objeto no este listo para ser usado
+    // Ejecutar componente Loader mientras el objeto no este listo para ser usado
     <>
       <div className='container-prod d-flex flex-wrap route'>
         {loading ? <Loader /> : <CardList products={arrayList} />}

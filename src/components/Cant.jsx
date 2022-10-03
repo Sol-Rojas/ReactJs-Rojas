@@ -1,25 +1,39 @@
-import React, { useState } from 'react';
-import Swal from 'sweetalert2'
+import React, { useState } from "react";
+import Toastify from "toastify-js";
+import "toastify-js/src/toastify.css";
+
 const Cant = ({ stock, initial, onAdd }) => {
 
   const [cant, setCant] = useState(initial);
 
   // Botones para cantidad de unidades del producto
   const handleMas = () => {
+
     if (cant < stock) {
+
       setCant(cant + 1)
+
     } else {
-      Swal.fire({
-        icon: 'warning',
-        title: 'Sin más stock',
-        width: '27rem',
-        padding: '33px',
-        color: '#000',
-        background: 'url(https://s.clipartkey.com/mpngs/s/275-2750618_music-note-frame-black-music-note-notes-music.png)'
-      })
+
+      Toastify({
+        text: "Máximo de stock alcanzado",
+        duration: 2000,
+        close: true,
+        gravity: "top",
+        position: "center",
+        stopOnFocus: true,
+        style: {
+          background: "rgb(238, 15, 15)",
+          border : "1px solid rgb(200, 120, 120)",
+          borderRadius : "5px",
+          marginTop: "23px"
+        }
+      }).showToast();
     }
   }
+
   const handleRest = () => {
+
     if (cant > 1) {
       setCant(cant - 1)
     }

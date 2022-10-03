@@ -5,7 +5,6 @@
 /.pnp
 .pnp.js
 /public/instrumentos.json
-/src/utils/getProducts.js
 
 # testing
 /coverage

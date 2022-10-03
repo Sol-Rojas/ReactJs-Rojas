@@ -1,6 +1,5 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import Swal from 'sweetalert2'
 import Cant from "./Cant";
 import { CartContext } from "../context/CartContext";
 
@@ -12,18 +11,8 @@ const CardDetail = ({item}) => {
 
   const onAdd = (count) => {
 
-    // Alerta agregar
-    Swal.fire({
-      icon: 'success',
-      title: 'Añadido al carrito',
-      width: '27rem' ,
-      padding: '33px',
-      color: '#000',
-      background: 'url(https://s.clipartkey.com/mpngs/s/275-2750618_music-note-frame-black-music-note-notes-music.png)'
-    })
     setItemCount(count)
 
-    // LLamo funcion agregar
     addProduct(item, count)
   }
 
