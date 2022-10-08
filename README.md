@@ -13,7 +13,3 @@ npm install
 ```
 npm start
 ```
-
-## Frameworks 
-
--Bootstrap v5.1
