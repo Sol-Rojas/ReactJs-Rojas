@@ -7,6 +7,17 @@ const CartContextProvider = ({ children }) => {
 
     const [cartList, setCartList] = useState([])
 
+    const swal = () => {
+        Swal.fire({
+            icon: 'success',
+            title: 'Añadido al carrito',
+            width: '27rem' ,
+            padding: '33px',
+            color: '#000',
+            background: 'url(https://s.clipartkey.com/mpngs/s/275-2750618_music-note-frame-black-music-note-notes-music.png)'
+        })
+    }
+
     const addProduct = (prod, count) => {
 
         if (isInCart(prod.id)) {
@@ -14,27 +25,13 @@ const CartContextProvider = ({ children }) => {
             const index = cartList.findIndex(item => item.id === prod.id)
 
             if (prod.stock >= cartList[index].count + count) {
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Añadido al carrito',
-                    width: '27rem' ,
-                    padding: '33px',
-                    color: '#000',
-                    background: 'url(https://s.clipartkey.com/mpngs/s/275-2750618_music-note-frame-black-music-note-notes-music.png)'
-                })
-                
+
+                swal()                
                 cartList[index].count += count
 
             } else if ((prod.stock < cartList[index].count + count) && (prod.stock !== cartList[index].count)) { 
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Añadido al carrito',
-                    width: '27rem',
-                    padding: '33px',
-                    color: '#000',
-                    background: 'url(https://s.clipartkey.com/mpngs/s/275-2750618_music-note-frame-black-music-note-notes-music.png)'
-                })
 
+                swal()
                 cartList[index].count = prod.stock
 
             } else { 
@@ -55,38 +52,26 @@ const CartContextProvider = ({ children }) => {
             prod.count = count
 
             setCartList([...cartList, prod])
-
-            Swal.fire({
-                icon: 'success',
-                title: 'Añadido al carrito',
-                width: '27rem' ,
-                padding: '33px',
-                color: '#000',
-                background: 'url(https://s.clipartkey.com/mpngs/s/275-2750618_music-note-frame-black-music-note-notes-music.png)'
-            })
+            swal()
         }
     }
 
-    // Si el producto ya se encuentra en el carrito aumenta su cantidad
     const isInCart = (id) => {
         return cartList.some(item => item.id === id)
     }
 
-    // Subtotal de los productos
     const subTotalProd = (id) => {
         const index = cartList.map(prod => prod.id).indexOf(id);
 
         return cartList[index].precio * cartList[index].count;
     }
 
-    // Subtotal de la compra
     const subTotalComp = () => {
         const total = cartList.map(prod => subTotalProd(prod.id));
 
         return total.reduce((previousValue, currentValue) => previousValue + currentValue);
     }
 
-    // Descuento por compra
     const descuentoFirst = () => {
         return subTotalComp() - 600;
     }
@@ -94,12 +79,10 @@ const CartContextProvider = ({ children }) => {
         return subTotalComp() - descuentoFirst();
     }
 
-    // Importe total
     const compraTotal = () => {
         return subTotalComp() - descuentoTotal();
     }
 
-    // Eliminar producto del carrito
     const deleteProduct = (id) => {
         const index = cartList.findIndex(prod => prod.id === id)
 
@@ -108,15 +91,12 @@ const CartContextProvider = ({ children }) => {
         setCartList([...cartList])
     }
 
-    // Vaciar carrito
     const clear = () => {
         setCartList([])
     }
 
-    // Cantidad de productos en carrito
     const totalProductsQty = () => cartList.reduce((cant, productoActual) => cant + productoActual.count, 0)
 
-    // Container de funciones
     const accions = {
         cartList,
         addProduct,

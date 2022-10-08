@@ -10,18 +10,15 @@ const Cart = () => {
 
     const { cartList, clear, compraTotal, subTotalComp, descuentoTotal } = useContext(CartContext);
 
-    // Input nombre de usuario
-    const textoValido = (texto) => { 
+    const validName = (texto) => {
         return texto.split("").some(elemento => elemento !== " ")
     }
 
-    // Input numero de teléfono
-    const numeroValido = (numero) => { 
-        return numero.split("").some(elemento => (isNaN(parseInt(elemento)) === false) )
+    const validNumber = (numero) => {
+        return numero.split("").some(elemento => (isNaN(parseInt(elemento)) === false))
     }
 
-    // Input Email
-    const mailValido = (mail) => {
+    const validEmail = (mail) => {
         const mailConArroba = mail.split("").some(elemento => elemento === "@")
 
         const mailConPunto = mail.split("").some(elemento => elemento === ".")
@@ -41,49 +38,48 @@ const Cart = () => {
 
         const mailForm = form.children[2].value
 
-        // Crear orden de compra solo cuando los datos ingresados sean válidos
-        if (textoValido(nombreForm) && numeroValido(telefonoForm) && mailValido(mailForm)) { 
-            
-            const itemsFiltrados = cartList.map(producto => ( 
+        if (validName(nombreForm) && validNumber(telefonoForm) && validEmail(mailForm)) {
+
+            const itemsFiltrados = cartList.map(producto => (
                 {
-                    id : producto.id,
+                    id: producto.id,
                     name: producto.name,
                     precio: producto.precio,
                     quantity: producto.count
                 }
             ))
-            
+
             const orden = {
-                // Datos ingresados por el usuario
-                buyer : { 
-                    name : nombreForm,
-                    phone : telefonoForm,
-                    email : mailForm
+
+                buyer: {
+                    name: nombreForm,
+                    phone: telefonoForm,
+                    email: mailForm
                 },
 
-                items : itemsFiltrados,
-                date : serverTimestamp(),
-                total : compraTotal(),
+                items: itemsFiltrados,
+                date: serverTimestamp(),
+                total: compraTotal(),
             }
 
-            const newOrderRef = doc(collection(db, "orders")) 
-            await setDoc(newOrderRef, orden) 
-            
+            const newOrderRef = doc(collection(db, "orders"))
+            await setDoc(newOrderRef, orden)
+
             Swal.fire({
                 icon: 'success',
                 title: '¡Compra exitosa!',
                 text: `Guarda el ID de tu compra : ${newOrderRef.id}`,
-                width: '27rem' ,
+                width: '27rem',
                 padding: '33px',
                 color: '#000',
                 background: ' rgb(181 235 174)'
             })
-            
-            cartList.forEach( async producto => {
-                const productoRef = doc(db, "instrumentos", producto.id) 
-                await updateDoc(productoRef, { 
-                    // Restar el stock de la cantidad comprada
-                    stock : increment(-producto.count) 
+
+            cartList.forEach(async producto => {
+                const productoRef = doc(db, "instrumentos", producto.id)
+                await updateDoc(productoRef, {
+
+                    stock: increment(-producto.count)
                 })
             })
 
@@ -110,32 +106,33 @@ const Cart = () => {
                     <Link to='/'><button className='btn btn-primary'>Ir a la tienda</button></Link>
                 </div>
                 :
-                <div className= "d-flex">
+                <div className="d-flex container-cart">
                     <div>
-                        {cartList.map(element => 
-                            <CartItem 
-                            key = {element.id} 
-                            id = {element.id}
-                            img = {element.img}
-                            name = {element.name}
-                            count = {element.count}
-                            marca = {element.marca}
-                            precio = {element.precio} />
+                        {cartList.map(element =>
+                            <CartItem
+                                key={element.id}
+                                id={element.id}
+                                img={element.img}
+                                name={element.name}
+                                count={element.count}
+                                marca={element.marca}
+                                precio={element.precio} 
+                            />
                         )}
                     </div>
                     <div className=" d-flex align-items-start">
-                        <button className='btn btn-dark botonBrown' onClick={() => clear()}>Vaciar carrito</button>                  
+                        <button className='btn btn-dark botonBrown' onClick={() => clear()}>Vaciar carrito</button>
                         <div className='ordenCompra'>
                             <h4 className="titleBuy">Orden de compra</h4>
                             <form id="formOrden">
-                               <input type="text" className="inputBuy" placeholder="Nombre" />
-                               <input type="number" className="inputBuy" placeholder="Teléfono" />
-                               <input type="email" className="inputBuy" placeholder="Email" />
+                                <input type="text" className="inputBuy" placeholder="Nombre" />
+                                <input type="number" className="inputBuy" placeholder="Teléfono" />
+                                <input type="email" className="inputBuy" placeholder="Email" />
                             </form>
                             <p className="card-text">Subtotal: ${subTotalComp()}</p>
                             <p className="card-text borderBotom">Descuento: -${descuentoTotal()}</p>
-                            <b >Importe total: ${compraTotal()}</b>                            
-                            <button className='btn btn-darkk comprarCarrito'onClick={(e) => ordenDeCompra(e)} >Finalizar compra</button> 
+                            <b >Importe total: ${compraTotal()}</b>
+                            <button className='btn btn-darkk comprarCarrito' onClick={(e) => ordenDeCompra(e)} >Finalizar compra</button>
                         </div>
                     </div>
                 </div>

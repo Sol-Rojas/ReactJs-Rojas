@@ -32,7 +32,6 @@ const Details = () => {
   }, [id])
 
   return (
-    // Ejecutar componente Loader mientras el objeto no este listo para ser usado
     <>
       <div className='container-prod d-flex flex-wrap route'>
         {loading ? <Loader /> : <CardDetail item={data} />}

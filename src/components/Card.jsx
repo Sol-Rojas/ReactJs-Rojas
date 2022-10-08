@@ -5,7 +5,7 @@ const Card = ({product}) => {
     return (
       <>
       <div className='card'>
-        <img className='product' src={product.img} alt="producto" />
+        <img className='product img-card' src={product.img} alt="producto" />
         <Link to={`/detail/${product.id}`}><button className="btn btn-dark agregarCarrito">Ver detalles</button></Link>
         <div className="card-body">
           <h3 className="card-title">{product.name}</h3>

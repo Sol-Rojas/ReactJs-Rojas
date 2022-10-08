@@ -31,10 +31,10 @@ form {
   margin-bottom: 5px;
 }
 
-.navbar-collapse{
+.navbar-collapse {
   display: flex;
   justify-content: center;
-  text-align: center ;
+  text-align: center;
 }
 
 li {
@@ -47,7 +47,7 @@ li {
 }
 
 .carrito {
-  font-size:medium;
+  font-size: medium;
   background-color: rgb(221, 31, 31);
   color: aliceblue;
   padding-right: 5px;
@@ -77,10 +77,10 @@ li {
   color: rgba(255, 255, 255, 0.938);
   padding: 15px;
   margin-left: 10%;
-  
+
 }
 
-.titleBuy{
+.titleBuy {
   margin-bottom: 2rem;
   color: #c8c1c1;
 }
@@ -90,7 +90,7 @@ li {
   margin-top: 50%;
 }
 
-.borderBotom{
+.borderBotom {
   border-bottom: #f4f0f0 solid 1px;
   padding-bottom: 1rem;
 }
@@ -122,6 +122,7 @@ li {
 .container-Detail {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.557);
   margin: 30px 40px;
   padding: 10px;
@@ -193,12 +194,12 @@ form {
 
 /* ---SWAL-- */
 
-button.swal2-confirm.swal2-styled{
+button.swal2-confirm.swal2-styled {
   background: #000000de;
   border-radius: 0px
 }
 
-div.swal2-actions{
+div.swal2-actions {
   margin-top: 10px;
 }
 
@@ -208,7 +209,7 @@ h2.swal2-title {
 
 /* -------CARDS CARRRITO----------- */
 
-.prod-carrito{
+.prod-carrito {
   margin: 0%;
   width: 60%;
 }
@@ -231,9 +232,166 @@ h2.swal2-title {
 
 .inputBuy {
   background-color: transparent;
-  border:none;
+  border: none;
   border-bottom: #f1f1f1 4px solid;
   margin: 5px;
   width: 100%;
   color: #f4f0f0
+}
+
+/* --------------FOOTER--------------- */
+
+footer {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 270px;
+}
+
+footer .web-map {
+  display: flex;
+}
+
+footer .web-map ul {
+  list-style: none;
+  margin: 25px;
+  padding-left: 0;
+}
+
+footer .web-map ul li {
+  margin-bottom: 8px;
+}
+
+footer .web-map ul .text {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #e2dfdf;
+}
+
+footer .web-map ul .small-link {
+  font-size: 0.7rem;
+  color: #726767;
+  cursor: pointer;
+}
+
+footer .web-map ul .small-link:hover {
+  color: #fffdfd;
+}
+
+footer .social-icons {
+  display: flex;
+  justify-content: center;
+  margin: 40px;
+  flex-direction: column;
+}
+
+footer .social-icons .text {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: white;
+}
+
+footer .social-icons ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+footer .social-icons ul .twiterfb {
+  margin-right: 20px;
+  padding: 0;
+}
+
+footer .social-icons ul .twiterfb:hover {
+  border-radius: 25px;
+  background-color: rgba(241, 245, 248, 0.282);
+}
+
+footer .social-icons ul .insta:hover {
+  border-radius: 15px;
+  background-color: #f0f4f848;
+}
+
+/* --------QUERYS------- */
+
+@media screen and (max-width: 1400px) {
+  .imgDetail {
+    width: 20%;
+    height: 30%;
+  }
+}
+
+@media screen and (max-width: 888px) {
+  .img-card {
+    width: 100%;
+  }
+
+  .imgDetail {
+    width: 100%;
+  }
+
+  .card-detail {
+    flex-direction: column;
+  }
+
+  .bodyDetail {
+    width: 100%;
+  }
+
+  .clicks {
+    flex-direction: column;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+
+  footer .web-map ul {
+    width: 50%;
+  }
+
+  footer .web-map .links {
+    text-align: start;
+  }
+
+  footer .social-icons {
+    margin-top: 0;
+  }
+
+}
+
+@media screen and (max-width: 590px) {
+  .container-cart {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .navtop {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+  }
+
+  .inputSearch {
+    width:100%;
+    margin-right: 1rem;
+  }
+
+  .mail {
+    font-size: 50%;
+  }
+
+  .titleContacto {
+    font-size: medium;
+  }
+  
+  .form-control {
+    width: 100%;
+  }
 }

@@ -11,8 +11,9 @@ const CardList = ({ products }) => {
           name={product.name}
           precio={product.precio}
           stock={product.stock}
-          product={product} />
-        ))}
+          product={product} 
+        />
+      ))}
     </>
   )
 }

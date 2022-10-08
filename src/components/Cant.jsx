@@ -6,7 +6,6 @@ const Cant = ({ stock, initial, onAdd }) => {
 
   const [cant, setCant] = useState(initial);
 
-  // Botones para cantidad de unidades del producto
   const handleMas = () => {
 
     if (cant < stock) {
